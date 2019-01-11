@@ -1,11 +1,10 @@
 
+# Teach-iOS
 
-Resources for students learning iOS. Resources include starter projects, learning material, topics, and more. 
+**Resources for students learning iOS. Resources include starter projects, learning material, topics, and more.**
 
-Starter projects include: 
+### Directory of Projects
 
-APIs and Cocoa Pods:
-
-• Tumblr Starter
-
-TableView Section Headers
+APIs, CocoaPods, and TableViews
+* [TableView Section Headers & UISearchBar](https://github.com/membriux/Teach-iOS/tree/master/TableView%20Section%20Headers)
+* [TumblrStarterProject](https://github.com/membriux/Teach-iOS/tree/master/tumblerLab)
