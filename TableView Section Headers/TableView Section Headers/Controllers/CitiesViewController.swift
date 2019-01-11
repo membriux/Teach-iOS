@@ -16,7 +16,7 @@ import UIKit
 
 class CitiesViewController: UIViewController {
 
-    // –––––    TODO: Connect TableView outlet    –––––
+    // ––––– TODO: Connect TableView outlet
     
     
     
@@ -32,19 +32,19 @@ class CitiesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // –––––    TODO: Assign tableView.datasource to VC    –––––
+        // ––––– TODO: Assign tableView.datasource to VC
         
         
-        // –––––    TODO: Assign tableView.delegate to VC    –––––
+        // ––––– TODO: Assign tableView.delegate to VC
         
         
-        // –––––    TODO: Refresh tableView    –––––
+        // ––––– TODO: Refresh tableView
         
     }
     
     
 
-    // –––––    TODO: Add Table View Functions    –––––
+    // –––––  TODO: Add Table View Functions
 
     
     

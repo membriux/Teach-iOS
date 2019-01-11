@@ -1,18 +1,20 @@
 //
-//  PostCell.swift
-//  tumblerLab
+//  CityCell.swift
+//  TableView Section Headers
 //
-//  Created by Memo on 1/10/19.
+//  Created by Memo on 1/11/19.
 //  Copyright © 2019 Membriux. All rights reserved.
 //
 
+// –––––    Comment    –––––
+
 import UIKit
 
-class PostCell: UITableViewCell {
+class CityCell: UITableViewCell {
 
-    // ––––– TODO: Connect UIImageView 
+    // –––––    TODO: Connect the cityName Label    –––––
     
-    
+    @IBOutlet weak var cityLabel: UILabel!
     
     
     

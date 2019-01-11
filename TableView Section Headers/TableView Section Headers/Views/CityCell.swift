@@ -12,7 +12,7 @@ import UIKit
 
 class CityCell: UITableViewCell {
 
-    // –––––    TODO: Connect the cityName Label    –––––
+    // –––––  TODO: Connect the cityName Label 
     
     
     

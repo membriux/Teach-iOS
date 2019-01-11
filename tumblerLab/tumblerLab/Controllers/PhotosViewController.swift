@@ -42,14 +42,14 @@ class PhotosViewController: UIViewController {
 extension PhotosViewController: UITableViewDataSource, UITableViewDelegate {
     
     
-    // –––––    TODO: Configure number of rows    –––––
+    // –––––  TODO: Configure number of rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Code here
         
     }
     
     
-    // –––––    TODO: Configure CellForRowAt    –––––
+    // –––––  TODO: Configure CellForRowAt
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Code here
         
