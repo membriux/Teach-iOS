@@ -1,6 +1,7 @@
 
 
-## TumblrLab Starter Project
+## TumblrLab Starter Project Steps 
+
 **1. Get posts (json)**
 
 **2. Configure TableView Cells**

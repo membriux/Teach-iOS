@@ -1,6 +1,6 @@
 
 
-## UITableView Section Headers
+## UITableView Section Headers Steps
 **1. Create TableView**
 * Connect to CitiesViewController
 *  Set tableView delegate and datasource
