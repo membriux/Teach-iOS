@@ -9,7 +9,8 @@
 
 import UIKit
 
-class CitiesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CitiesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating {
+
     
     // –––––    TODO: Connect TableView outlet
     @IBOutlet weak var tableView: UITableView!
@@ -22,13 +23,20 @@ class CitiesViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 ("New York", ["Buffalo", "New York"]),
                 ("Pennsylvania", ["Pittsburg", "Philadelphia"]),
                 ("Texas", ["Houston", "San Antonio", "Dallas", "Austin", "Fort Worth"])]
+
+    
+    // Filtered array for UISearchBar
+    var filteredData: [(String, [String])]!, searchController: UISearchController!
     
     // Add Header Identifier
     let HeaderViewIdentifier = "TableViewHeaderView"
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        filteredData = data
+        setupSearchController()
         
         // –––––    TODO: Assign tableView.datasource to VC    –––––
         tableView.dataSource = self
@@ -37,7 +45,7 @@ class CitiesViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.delegate = self
         
         // –––––    TODO: Refresh tableView    –––––
-//        tableView.reloadData()
+        tableView.reloadData()
         
         // Register UITableViewHeaderFooterView
         tableView.register(UITableViewHeaderFooterView.self, forHeaderFooterViewReuseIdentifier: HeaderViewIdentifier)
@@ -46,30 +54,68 @@ class CitiesViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     
+    // ––––– SearchBar Functionality –––––
+    
+    // Create Search Bar
+    func setupSearchController() {
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        
+        // If we are using this same view controller to present the results
+        // dimming it out wouldn't make sense. Should probably only set
+        // this to yes if using another controller to display the search results.
+        searchController.dimsBackgroundDuringPresentation = false
+        
+        searchController.searchBar.sizeToFit()
+        tableView.tableHeaderView = searchController.searchBar
+        
+        // Sets this view controller as presenting view controller for the search interface
+        definesPresentationContext = true
+
+    }
+    
+    // Update tableview as the user types
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text else { return }
+        filteredData = data.filter({ (data: (String, [String])) -> Bool in
+            let state = data.0
+            return state.localizedCaseInsensitiveContains(text)
+            
+        })
+        if filteredData.count == 0 {
+            filteredData = data
+        }
+        tableView.reloadData()
+    }
+    
 
     // –––––    TODO: Add Table View Functions    –––––
     func numberOfSections(in tableView: UITableView) -> Int {
-        return data.count
+        return filteredData.count
     }
     
+    // Number of Sections
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data[section].1.count
+        return filteredData[section].1.count
     }
     
+    // CellforRowAt
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CityCell", for: indexPath) as! CityCell
-        let citiesInSection = data[indexPath.section].1
+        let citiesInSection = filteredData[indexPath.section].1
         cell.cityLabel.text = citiesInSection[indexPath.row]
         return cell
     }
     
+    // Height for section headers
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 60
     }
     
+    // Content of each section header
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: HeaderViewIdentifier)
-        headerView!.textLabel!.text = data[section].0
+        headerView!.textLabel!.text = filteredData[section].0
         
         
         // ––––– The longer way –––––
