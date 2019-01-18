@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qye-Ge-Gv0">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photos View Controller-->
+        <scene sceneID="gkt-Zk-VtM">
+            <objects>
+                <viewController id="Gq3-gT-cGV" customClass="PhotosViewController" customModule="Tumblr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="05D-Tx-Sfn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ypc-YR-5Gy">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PhotosTableViewCell" rowHeight="300" id="hHM-fd-4SY" customClass="PhotosTableViewCell" customModule="Tumblr" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hHM-fd-4SY" id="OSX-tL-cWR">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wm7-wP-lTW">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="300" id="Ln3-ij-ZuB"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="wm7-wP-lTW" firstAttribute="top" secondItem="OSX-tL-cWR" secondAttribute="top" id="SpS-fA-R4s"/>
+                                                <constraint firstAttribute="bottom" secondItem="wm7-wP-lTW" secondAttribute="bottom" id="TG1-Dw-Zst"/>
+                                                <constraint firstItem="wm7-wP-lTW" firstAttribute="leading" secondItem="OSX-tL-cWR" secondAttribute="leading" id="VST-wM-urB"/>
+                                                <constraint firstAttribute="trailing" secondItem="wm7-wP-lTW" secondAttribute="trailing" id="XMO-Mu-dSu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="photoImageView" destination="wm7-wP-lTW" id="fUP-y9-3Mf"/>
+                                            <segue destination="kpm-Ey-sEQ" kind="show" id="wxR-2h-def"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ypc-YR-5Gy" firstAttribute="leading" secondItem="n42-7g-atY" secondAttribute="leading" id="1TO-iQ-Bjl"/>
+                            <constraint firstItem="n42-7g-atY" firstAttribute="bottom" secondItem="Ypc-YR-5Gy" secondAttribute="bottom" id="EI7-hH-l2H"/>
+                            <constraint firstItem="Ypc-YR-5Gy" firstAttribute="top" secondItem="n42-7g-atY" secondAttribute="top" id="ojJ-eP-33X"/>
+                            <constraint firstItem="n42-7g-atY" firstAttribute="trailing" secondItem="Ypc-YR-5Gy" secondAttribute="trailing" id="xVc-XZ-wz8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="n42-7g-atY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Ph-1g-uzV"/>
+                    <connections>
+                        <outlet property="tableView" destination="Ypc-YR-5Gy" id="d02-27-00M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GwN-pe-8vP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1928.985507246377" y="124.55357142857142"/>
+        </scene>
+        <!--Photo Details View Controller-->
+        <scene sceneID="av5-LV-mq5">
+            <objects>
+                <viewController id="kpm-Ey-sEQ" customClass="PhotoDetailsViewController" customModule="Tumblr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VTG-kY-JLM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Ih-5S-0mm">
+                                <rect key="frame" x="0.0" y="88" width="414" height="298.5"/>
+                                <color key="backgroundColor" red="0.3803921569" green="0.6588235294" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5Ih-5S-0mm" firstAttribute="width" secondItem="VTG-kY-JLM" secondAttribute="width" id="5gV-ER-Z1M"/>
+                            <constraint firstItem="5Ih-5S-0mm" firstAttribute="top" secondItem="Fgq-Vr-ejZ" secondAttribute="top" id="Yv6-OT-bTf"/>
+                            <constraint firstItem="5Ih-5S-0mm" firstAttribute="leading" secondItem="Fgq-Vr-ejZ" secondAttribute="leading" id="bds-Yj-faV"/>
+                            <constraint firstItem="5Ih-5S-0mm" firstAttribute="height" secondItem="VTG-kY-JLM" secondAttribute="height" multiplier="2:6" id="zWD-3L-dsv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fgq-Vr-ejZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="postImage" destination="5Ih-5S-0mm" id="kqe-44-cbG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dxn-W8-Uam" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2672" y="125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IdU-Gw-l0N">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qye-Ge-Gv0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cWh-5C-px4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Gq3-gT-cGV" kind="relationship" relationship="rootViewController" id="LiU-4j-gDr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zu3-XM-JGU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1184" y="125"/>
+        </scene>
+    </scenes>
+</document>
