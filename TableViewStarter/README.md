@@ -11,7 +11,19 @@
 This guide provides a quick recipe for setting up and using a simple table view with Interface Builder and prototype cells. 
 
 ## Xcode setup
-...
+Starting a new project on Xcode
+
+### Create the Project
+
+Launch Xcode and choose "Create a new Xcode project" or from within Xcode, Click on File -> New -> Project
+
+![Xcode](https://i.imgur.com/7oDWujw.gif)
+
+Create a "Single View" project, and click Next.
+
+![Xcode](https://i.imgur.com/Kjr10ht.png)
+
+Fill in the name of the project and click next.
 
 
 ## TableView Setup
