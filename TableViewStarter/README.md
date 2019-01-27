@@ -6,7 +6,7 @@
 
 [Table views](https://developer.apple.com/documentation/uikit/uitableview) are used to display grouped lists of cells. Here are some example of table views:
 
-![TableViews Example](https://imgur.com/sI6L9Bx "TableViews")
+![TableViews Example](https://i.imgur.com/sI6L9Bx.jpg "TableViews")
 
 This guide provides a quick recipe for setting up and using a simple table view with Interface Builder and prototype cells. 
 
@@ -17,7 +17,7 @@ This guide provides a quick recipe for setting up and using a simple table view 
 ## TableView Setup
 
 The example we'll use throughout is a table with cities and state abbreviations.
-![Cities and States](https://imgur.com/oYv2vmX "Cities and States")
+![Cities and States](https://i.imgur.com/oYv2vmX.png "Cities and States")
 
 
 ### Step 1: Determine what data you need to display in the Table
@@ -36,7 +36,7 @@ let data = ["New York, NY", "Los Angeles, CA", "Chicago, IL", "Houston, TX",
 
 In your storyboard drag a ```Table View``` (not ```Table View Controller```) from the Object Library into your view controller. Add an outlet for the table view in your view controller.
 
-![Table View](https://imgur.com/DSHZu9r "TableView")
+![Table View](https://i.imgur.com/DSHZu9r.gif "TableView")
 
 
 
@@ -44,7 +44,7 @@ In your storyboard drag a ```Table View``` (not ```Table View Controller```) fro
 
 You'll need a way to describe the appearance of the cells in your table. One way to design a reusable template for cells is to use _prototype cells_. Drag a ```Table View Cell``` from the Object Library into your table view. You can now design the layout of the prototype cell by adding more components from the Object Library.
 
-![Table View Cell](https://imgur.com/nMFup96 "TableViewCell")
+![Table View Cell](https://i.imgur.com/nMFup96.gif "TableViewCell")
 
 
 ### Step 4: Create custom class for prototype cell
@@ -55,7 +55,7 @@ Select ```File -> New -> File... -> iOS -> Source -> Cocoa Touch Class``` and cr
 
 Back in Interface Builder select your prototype cell, and in the Identity Inspector, set its custom class property to the new class you just created.
 
-![Cell class](https://imgur.com/2r9tOJo "Cell class")
+![Cell class](https://i.imgur.com/2r9tOJo.png "Cell class")
 
 
 
@@ -64,7 +64,7 @@ Back in Interface Builder select your prototype cell, and in the Identity Inspec
 
 Open the Assistant Editor (two overlapping rings view) and select your custom class. Add outlets for elements you need to configure. You might need to add code to provide an easy way to configure the cell.
 
-![Add Code to cell](https://imgur.com/Tkofhwo "Add code to cell")
+![Add Code to cell](https://i.imgur.com/Tkofhwo.gif "Add code to cell")
 
 The example cell is simple enough that we don't have to do anything special. It just has two labels one for the city and one for the state abbreviation.
 
@@ -80,7 +80,7 @@ class DemoPrototypeCell: UITableViewCell {
 
 You'll need a way to tell the table view to create and reuse instances of this prototype cell. Select the cell and give it a unique identifier in the Attributes Inspector.
 
-![Cell Identifier](https://imgur.com/nZdbnm5 "Cell identifier")
+![Cell Identifier](https://i.imgur.com/nZdbnm5.png "Cell identifier")
 
 
 ### Step 7: Set the table view's data source and delegate
@@ -166,7 +166,7 @@ The most common event you'll need respond to is the user selecting a row in the 
 
 A common behavior when a row is selected, is to push a new view controller with details about that row. You can do this in a storyboard by control-dragging from the cell and selecting the appropriate segue under the ```Selection Segue``` section.
 
-![Segues](https://imgur.com/GrT010h "Segues")
+![Segues](https://i.imgur.com/GrT010h.gif "Segues")
 
 #### Handling row selection programmatically
 You can also respond programmatically by implementing the ```UITableViewDelegate``` method ```didSelectRowAtIndexPath```:.
