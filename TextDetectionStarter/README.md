@@ -12,7 +12,7 @@
 To save you time from building the UI of the app and focus on learning the Vision framework, download the [starter project](starter_project) to begin with. 
 NOTE: We will be using Swift 4 and Xcode 9
 
-![Pic 1](/pic1.png "Pic1")
+![Pic 1](/TextDetectionStarter/pic1.png "Pic1")
 
 ## Creating a Live Stream
 When you open the project, you see that the views in the storyboard are all ready and set up for you. Heading over to ```ViewController.swift```, you will find the code skeleton with a couple of outlets and funcions. Our first step is to create the live stream that will be used to detect text. Right under the ```imageView``` outlet, declare another property for ```AVCaptureSession```:
@@ -83,7 +83,7 @@ Before we implement the text detection part, we need to understand how the Visio
 * Handlers – Handlers are when you want the framework to perform something after the request is made or “handle” the request.
 * Observations – Observations are what you want to do with the data provided with you.
 
-[Request-Observation](/request-obs.png)
+[Request-Observation](https://github.com/membriux/Teach-iOS/blob/unit-3/TextDetectionStarter/request-obs.png)
 
 
 Now to start, let’s begin with a request. Right under the initialization of the variable ```session```, declare another variable as follows:
