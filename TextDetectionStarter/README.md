@@ -71,7 +71,7 @@ override func viewDidLayoutSubviews() {
 
 Before you give it a run, add an entry in Info.plist to provide a reason why you need to use the camera. This is required by Apple since the release of iOS 10:
 
-[Privcay Img](/privacy.png)
+![Priivacy Img](/TextDetectionStarter/privacy.png "Privacy")
 
 The live stream should work as expected. However, there is no text detection going on because we haven’t implemented the Vision framework yet. This is what we will do next.
 
@@ -83,7 +83,7 @@ Before we implement the text detection part, we need to understand how the Visio
 * Handlers – Handlers are when you want the framework to perform something after the request is made or “handle” the request.
 * Observations – Observations are what you want to do with the data provided with you.
 
-[Request-Observation](https://github.com/membriux/Teach-iOS/blob/unit-3/TextDetectionStarter/request-obs.png)
+![Request-observation](/TextDetectionStarter/request-obs.png "Request-observation")
 
 
 Now to start, let’s begin with a request. Right under the initialization of the variable ```session```, declare another variable as follows:
