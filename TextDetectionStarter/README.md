@@ -137,7 +137,7 @@ In our app, we’ll have the framework to draw 2 boxes: one for each letter it d
 ```Swift
 func highlightWord(box: VNTextObservation) {
     guard let boxes = box.characterBoxes else {
-    return
+        return
     }
 
     var maxX: CGFloat = 9999.0
@@ -146,18 +146,18 @@ func highlightWord(box: VNTextObservation) {
     var minY: CGFloat = 0.0
 
     for char in boxes {
-    if char.bottomLeft.x < maxX {
-    maxX = char.bottomLeft.x
-    }
-    if char.bottomRight.x > minX {
-    minX = char.bottomRight.x
-    }
-    if char.bottomRight.y < maxY {
-    maxY = char.bottomRight.y
-    }
-    if char.topRight.y > minY {
-    minY = char.topRight.y
-    }
+        if char.bottomLeft.x < maxX {
+        maxX = char.bottomLeft.x
+        }
+        if char.bottomRight.x > minX {
+        minX = char.bottomRight.x
+        }
+        if char.bottomRight.y < maxY {
+        maxY = char.bottomRight.y
+        }
+        if char.topRight.y > minY {
+        minY = char.topRight.y
+        }
     }
 
     let xCord = maxX * imageView.frame.size.width
