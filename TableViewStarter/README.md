@@ -17,6 +17,7 @@ This guide provides a quick recipe for setting up and using a simple table view 
 ## TableView Setup
 
 The example we'll use throughout is a table with cities and state abbreviations.
+
 ![Cities and States](https://i.imgur.com/oYv2vmX.png "Cities and States")
 
 
@@ -185,7 +186,7 @@ func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
 - [CodePath's has a great guide](https://guides.codepath.com/ios/Table-View-Guide#) that covers table views more in-depth. 
 
-– [Section Header Tutorial](https://guides.codepath.com/ios/Table-View-Guide#working-with-sections)
+- [Section Header Tutorial](https://guides.codepath.com/ios/Table-View-Guide#working-with-sections)
 
-– [UISearchBarTutorial for TableViews](https://guides.codepath.com/ios/Search-Bar-Guide#working-with-uisearchbars-directly)
+- [UISearchBarTutorial for TableViews](https://guides.codepath.com/ios/Search-Bar-Guide#working-with-uisearchbars-directly)
 
