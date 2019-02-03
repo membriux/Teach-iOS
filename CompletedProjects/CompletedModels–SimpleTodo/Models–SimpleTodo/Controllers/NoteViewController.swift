@@ -23,8 +23,8 @@ class NoteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configureDatePickers()
+        
         
     }
     
@@ -34,10 +34,12 @@ class NoteViewController: UIViewController {
     @IBAction func addNote(_ sender: Any) {
         if inputsNotEmpty() {
          // –– Your code here ––
+            let title = noteTitle.text!
+            let date = noteDate.text!
+            let description = noteDescription.text!
             
-            
-            
-            
+            let note = Note(title: title, date: date, description: description)
+            Note.allNotes.append(note)
             
             resetFields()
         }
@@ -77,7 +79,6 @@ class NoteViewController: UIViewController {
     
     
     // ––––– DatePicker Helper Setup ––––––
-    
     func configureDatePickers() {
         datePicker.datePickerMode = .dateAndTime
         datePicker.addTarget(self, action: #selector(NoteViewController.dateChanged(datePicker:)), for: .valueChanged)

@@ -15,5 +15,5 @@ struct DateFormat {
     static let eventDateAndTime = "EEEE MMM d yyyy h:mm a"
     static let noteDate = "MMM d, h:mm a"
     
-
+    
 }

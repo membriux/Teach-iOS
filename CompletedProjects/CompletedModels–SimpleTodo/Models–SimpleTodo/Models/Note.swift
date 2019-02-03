@@ -10,15 +10,22 @@ import Foundation
 
 class Note {
     
-    static var allNotes: [Note]!
+    static var allNotes: [Note] = []
     
     // TODO: CREATE Note attributes
     // example:
     // var todoTitle: String
     
+    var todoTitle: String
+    var todoDate: String
+    var todoDescription: String
     
     // TODO: CREATE initializer for Note class
-    // Code here
+    init(title: String, date: String, description: String) {
+        todoTitle = title
+        todoDate = date
+        todoDescription = description
+    }
     
     
 }

@@ -24,6 +24,8 @@ class AllNotesViewController: UIViewController {
         notesTableView.rowHeight = UITableView.automaticDimension
         notesTableView.estimatedRowHeight = 50
         
+
+        notesTableView.reloadData()
     }
     
     
@@ -32,6 +34,7 @@ class AllNotesViewController: UIViewController {
     }
     
     @IBAction func refresh(_ sender: Any) {
+        print(Note.allNotes)
         notesTableView.reloadData()
     }
     
@@ -42,10 +45,18 @@ extension AllNotesViewController: UITableViewDataSource, UITableViewDelegate {
     // TODO: CONFIGURE tableView functionality
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Code here
+        return Note.allNotes.count
     }
+    
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Code
+        let cell = notesTableView.dequeueReusableCell(withIdentifier: "NoteCell") as! NoteCell
+        let note = Note.allNotes[indexPath.row]
+        cell.note = note
+        return cell
+        
     }
     
     
