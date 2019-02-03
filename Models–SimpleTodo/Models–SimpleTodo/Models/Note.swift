@@ -16,15 +16,10 @@ class Note {
     // example:
     // var todoTitle: String
     
-    var todoTitle: String
-    var todoDate: Date
-    var todoDescription: String
     
     // TODO: CREATE initializer for Note class
     init(title: String, date: Date, description: String) {
-        todoTitle = title
-        todoDate = date
-        todoDescription = description
+        // Code here
     }
     
     
