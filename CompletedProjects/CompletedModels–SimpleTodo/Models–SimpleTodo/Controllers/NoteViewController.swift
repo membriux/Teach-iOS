@@ -40,7 +40,6 @@ class NoteViewController: UIViewController {
             
             let note = Note(title: title, date: date, description: description)
             Note.allNotes.append(note)
-            
             resetFields()
         }
     }

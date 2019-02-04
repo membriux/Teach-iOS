@@ -10,10 +10,11 @@ import Foundation
 
 class Note {
     
-    static var allNotes: [Note] = []
+    // Using a variable
+    static var allNotes = [Note]()
     
     // TODO: CREATE Note attributes
-    // example:
+    // example: 
     // var todoTitle: String
     
     var todoTitle: String
@@ -26,6 +27,5 @@ class Note {
         todoDate = date
         todoDescription = description
     }
-    
     
 }

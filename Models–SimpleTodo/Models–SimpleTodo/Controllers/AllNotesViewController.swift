@@ -26,6 +26,11 @@ class AllNotesViewController: UIViewController {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        notesTableView.reloadData()
+    }
+    
     
     @IBAction func addNote(_ sender: Any) {
         performSegue(withIdentifier: "CreateNote", sender: self)

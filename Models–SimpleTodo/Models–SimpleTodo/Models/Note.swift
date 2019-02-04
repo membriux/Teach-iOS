@@ -10,7 +10,7 @@ import Foundation
 
 class Note {
     
-    static var allNotes: [Note]!
+    static var allNotes = [Note]()
     
     // TODO: CREATE Note attributes
     // example:
