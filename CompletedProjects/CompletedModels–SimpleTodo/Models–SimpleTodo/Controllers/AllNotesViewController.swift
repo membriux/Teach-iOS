@@ -13,7 +13,7 @@ class AllNotesViewController: UIViewController {
     @IBOutlet weak var notesTableView: UITableView!
     
     
-    let defaultNote = [Note(title: "Welcome to SimpleTodo", date: "This is a due date", description: "Start writing your own to-do notes and see them being posted here")]
+    let defaultNote = [Note(title: "Welcome to simpletodo!", date: "This is when your todo are due", description: "Start creating some todos!")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
