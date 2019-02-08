@@ -20,7 +20,7 @@
 * [Completed Projects](https://github.com/membriux/Teach-iOS/blob/master/ProjectZips/Unit2Completed%20Projects.zip)
 * [Lecture video for Unit 2](https://youtu.be/LFRToHPISnw)
 
-### Unit 3: Auto Layout**
+### Unit 3: Auto Layout
 * Project Starter: Use Flix app as project starter
 * [Completed Projects](https://github.com/membriux/Teach-iOS/blob/master/ProjectZips/Unit3%20CompletedProjects.zip)
 * [Lecture video for Unit 3](https://youtu.be/x_zGx80qqqc)
