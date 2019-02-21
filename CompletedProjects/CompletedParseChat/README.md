@@ -60,3 +60,13 @@ Describe any challenges encountered while building the app.
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
+
+
+## Steps
+
+* AppDelegate –  User Log in, Log out, logged in
+
+* LoginViewController / Storyboard – User log in/sign up button functionalities
+
+* ChatViewController – messages array, chatMessage object, retrieveMessages, sendMessage
+

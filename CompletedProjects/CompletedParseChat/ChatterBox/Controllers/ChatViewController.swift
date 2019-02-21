@@ -49,7 +49,7 @@ class ChatViewController: UIViewController {
     
     // TODO: ADD FUNCTIONALITY TO retrieveChatMessages()
     @objc func retrieveChatMessages() {
-        let query = PFQuery(className: "MemoMessages") // className = group chat
+        let query = PFQuery(className: "UCICodepath2") // className = group chat
         query.addDescendingOrder("createdAt")
         query.limit = 20
         query.includeKey("user")
@@ -69,7 +69,7 @@ class ChatViewController: UIViewController {
     @IBAction func onSend(_ sender: Any) {
         // Send message
         if messageTextField.text!.isEmpty == false {
-            let chatMessage = PFObject(className: "MemoMessages") // className = group chat
+            let chatMessage = PFObject(className: "UCICodepath2") // className = group chat
             chatMessage["text"] = messageTextField.text ?? ""
             chatMessage["user"] = PFUser.current()
             chatMessage.saveInBackground { (success, error) in
