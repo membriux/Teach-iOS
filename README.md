@@ -32,7 +32,12 @@
 * [Tuesday – Lecture video for Unit 4](https://youtu.be/zHbd0UyktlM)
 
 ### Unit 5: Intro to Parse
-* [Project Starters](https://github.com/membriux/Teach-iOS/blob/master/ProjectZips/Unit5%20StarterProjects.zip)
+* [Project Starters](https://github.com/membriux/Teach-iOS/blob/master/ProjectZips/Unit5StarterProjects.zip)
 * [Completed Projects](https://github.com/membriux/Teach-iOS/blob/master/ProjectZips/Unit5Completed.zip)
-* [Monday – Lecture video for Unit 4](https://youtu.be/hfmpyoQPY-A)
-* [Tuesday – Lecture video for Unit 4](https://youtu.be/zHbd0UyktlM)
+* [Monday – Lecture video for Unit 5](https://youtu.be/r-3yU66fQMQ)
+* [Tuesday – Lecture video for Unit 5](https://youtu.be/DOG89x-X9WI)
+
+### Unit 7: Intro MapKit
+* [Project Starters](https://github.com/membriux/Teach-iOS/blob/master/ProjectZips/Unit5StarterProjects.zip)
+* [Completed Projects](https://github.com/membriux/Teach-iOS/blob/master/ProjectZips/Unit5Completed.zip)
+* [Monday – Lecture video for Unit 7](https://youtu.be/C1t7hlCd6yk)
