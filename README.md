@@ -33,6 +33,6 @@
 
 ### Unit 5: Intro to Parse
 * [Project Starters](https://github.com/membriux/Teach-iOS/blob/master/ProjectZips/Unit5%20StarterProjects.zip)
-* [Completed Projects](https://github.com/membriux/Teach-iOS/blob/master/ProjectZips/Unit4%20CompletedProjects.zip)
+* [Completed Projects](https://github.com/membriux/Teach-iOS/blob/master/ProjectZips/Unit5Completed.zip)
 * [Monday – Lecture video for Unit 4](https://youtu.be/hfmpyoQPY-A)
 * [Tuesday – Lecture video for Unit 4](https://youtu.be/zHbd0UyktlM)
