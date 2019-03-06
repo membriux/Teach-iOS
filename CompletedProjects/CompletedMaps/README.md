@@ -1,5 +1,5 @@
 ## Starter Project for Photo Map Exercise (Swift)
-![Photo Map walkthrough](/walkthrough.gif)
+![Photo Map walkthrough](/CompletedProjects/CompletedMaps/walkthrough.gif)
 
 - Connects with Foursquare API
 - Implements `LocationsViewController`
