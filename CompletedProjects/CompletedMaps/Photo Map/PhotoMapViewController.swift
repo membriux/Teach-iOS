@@ -55,7 +55,7 @@ class PhotoMapViewController: UIViewController, UIImagePickerControllerDelegate,
     
     /* ----- TODO: Retrieve coordinates from LocationsViewController   */
     func locationsPickedLocation(controller: LocationsViewController, latitude: NSNumber, longitude: NSNumber) {
-        addPin(lat: CLLocationDegrees(latitude), lng: CLLocationDegrees(longitude))
+        addPin(lat: CLLocationDegrees(truncating: latitude), lng: CLLocationDegrees(truncating: longitude))
     }
     
     
@@ -113,10 +113,13 @@ class PhotoMapViewController: UIViewController, UIImagePickerControllerDelegate,
     
     
     func imagePickerController(_ picker: UIImagePickerController,
-                               didFinishPickingMediaWithInfo info: [String : Any]) {
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+// Local variable inserted by Swift 4.2 migrator.
+let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
+
         // Get the image captured by the UIImagePickerController
-        let _ = info[UIImagePickerControllerOriginalImage] as! UIImage
-        let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
+        let _ = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.originalImage)] as! UIImage
+        let editedImage = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.editedImage)] as! UIImage
         
         // Do something with the images (based on your use case)
         pickedImage = editedImage
@@ -129,3 +132,13 @@ class PhotoMapViewController: UIViewController, UIImagePickerControllerDelegate,
 
 }
 
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [UIImagePickerController.InfoKey: Any]) -> [String: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
+	return input.rawValue
+}

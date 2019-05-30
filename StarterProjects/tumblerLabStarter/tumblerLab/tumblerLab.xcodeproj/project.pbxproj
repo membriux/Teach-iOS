@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB2BAD4522A09F4000735ED5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB2BAD4422A09F4000735ED5 /* Default-568h@2x.png */; };
 		BB67AFD721E8528B008C36B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB67AFD621E8528B008C36B2 /* AppDelegate.swift */; };
 		BB67AFD921E8528B008C36B2 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB67AFD821E8528B008C36B2 /* PhotosViewController.swift */; };
 		BB67AFDC21E8528B008C36B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB67AFDA21E8528B008C36B2 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB2BAD4422A09F4000735ED5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BB67AFD321E8528B008C36B2 /* tumblerLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tumblerLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB67AFD621E8528B008C36B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB67AFD821E8528B008C36B2 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
@@ -44,6 +46,7 @@
 		BB67AFCA21E8528B008C36B2 = {
 			isa = PBXGroup;
 			children = (
+				BB2BAD4422A09F4000735ED5 /* Default-568h@2x.png */,
 				BB67AFD521E8528B008C36B2 /* tumblerLab */,
 				BB67AFD421E8528B008C36B2 /* Products */,
 			);
@@ -60,8 +63,8 @@
 		BB67AFD521E8528B008C36B2 /* tumblerLab */ = {
 			isa = PBXGroup;
 			children = (
-				BB67AFF321E86381008C36B2 /* JSONExample */,
 				BB67AFD621E8528B008C36B2 /* AppDelegate.swift */,
+				BB67AFF321E86381008C36B2 /* JSONExample */,
 				BB67AFDD21E8528D008C36B2 /* Assets.xcassets */,
 				BB67AFEA21E853CE008C36B2 /* Views */,
 				BB67AFE821E853AA008C36B2 /* Controllers */,
@@ -174,6 +177,7 @@
 				BB67AFF421E86381008C36B2 /* JSONExample in Resources */,
 				BB67AFE121E8528D008C36B2 /* LaunchScreen.storyboard in Resources */,
 				BB67AFDE21E8528D008C36B2 /* Assets.xcassets in Resources */,
+				BB2BAD4522A09F4000735ED5 /* Default-568h@2x.png in Resources */,
 				BB67AFDC21E8528B008C36B2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,14 +340,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9VVT5BZ4Y5;
-				INFOPLIST_FILE = "$(SRCROOT)/tumblerLab/Helper Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Helper Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.memo.tumblerLab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -354,14 +358,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9VVT5BZ4Y5;
-				INFOPLIST_FILE = "$(SRCROOT)/tumblerLab/Helper Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Helper Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.memo.tumblerLab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
