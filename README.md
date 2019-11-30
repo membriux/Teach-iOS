@@ -11,13 +11,13 @@
 
 
 ### Unit 1: APIs, CocoaPods, and TableViews
-* [Project Starters](https://github.com/membriux/Teach-iOS/blob/master/ProjectZips/Unit1StarterProjects.zip)
-* [Completed Projects](https://github.com/membriux/Teach-iOS/blob/master/ProjectZips/Unit1CompletedProjects.zip)
+* [Project Starters](ProjectZips/TumblrStarter1.zip)
+* [Completed Project](ProjectZips/CompletedTumblrLab2.zip)
 * [Lecture video for Unit 1](https://youtu.be/NXNAboLvG5c)
 
 ### Unit 2: Passing Data
-* [Project Starters](https://github.com/membriux/Teach-iOS/blob/master/ProjectZips/Unit2StarterProjects.zip)
-* [Completed Projects](https://github.com/membriux/Teach-iOS/blob/master/ProjectZips/Unit2Completed%20Projects.zip)
+* [Project Starters](ProjectZips/TumblrStarter2.zip)
+* [Completed Projects](ProjectZips/CompletedTumblrLab2.zip)
 * [Lecture video for Unit 2](https://youtu.be/LFRToHPISnw)
 
 ### Unit 3: Auto Layout
