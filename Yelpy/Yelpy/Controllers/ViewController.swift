@@ -10,18 +10,18 @@ import UIKit
 import AlamofireImage
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+        
+    // Outlets
+    @IBOutlet weak var tableView: UITableView!
     
-    // –––––– TODO: Initialize restaurantsArray
+    // Initiliazers
     var restaurantsArray: [Restaurant] = []
     
     
-    // ––––– TODO: Add storyboard Items (i.e. tableView + Cell + configurations for Cell)
-    // ––––– TODO: Next, place TableView outlet here
-    
-    @IBOutlet weak var tableView: UITableView!
+    // ––––– TODO: Create Search Bar
+    let searchController = UISearchController(searchResultsController: nil)
     
     
-    // ––––– TODO: Add tableView initializers
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,30 +48,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 extension ViewController {
     
     
-    // How many cells there will be
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return restaurantsArray.count
         
     }
     
-    // What type of cell it is
+    
+    // ––––– TODO: Configure cell to use [Movie] array instead of [[String:Any]]
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Create Restaurant Cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantCell") as! RestaurantCell
         
-        // Get individual restaurant
-        let r: Restaurant = restaurantsArray[indexPath.row]
-        
-        // Paste data to cell labels
-        cell.nameLabel.text = r.name
-        cell.categoryLabel.text = r.mainCategory
-        cell.ratingLabel.text = "Rating: " + String(r.rating)
-        cell.reviewsLabel.text = "Reviews: " + String(r.reviews)
-        
-        cell.restaurantImage.af.setImage(withURL: r.imageURL!)
-        cell.restaurantImage.layer.cornerRadius = 10
-        cell.restaurantImage.clipsToBounds = true
-        
+        // Set cell's restaurant
+        cell.r = restaurantsArray[indexPath.row]
         return cell
     }
 

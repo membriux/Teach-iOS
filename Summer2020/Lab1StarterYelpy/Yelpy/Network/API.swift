@@ -13,10 +13,10 @@ struct API {
     
 
     
-    static func getFoodData(completion: @escaping ([Restaurant]?) -> Void) {
+    static func getFoodData(completion: @escaping ([String:Any]?) -> Void) {
         
         // ––––– TODO: Add your own API key!
-        let apikey = "gjSp5LrrEi9tJFLQALnw-RdZSRy-TLiJsfPM09LzFMNpMnmSHQZ2n2R_f3ptONYEalxMIudE9avxn_bQvvDZJc1zpPdfPDOvdh08RlT8vZGbqFx3dbtkuliMwATHXnYx"
+        let apikey = ""
         
         // Coordinates for San Francisco
         let lat = 37.773972
@@ -27,6 +27,7 @@ struct API {
         
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         
+        // Insert API Key to request
         request.setValue("Bearer \(apikey)", forHTTPHeaderField: "Authorization")
         
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
@@ -36,22 +37,14 @@ struct API {
                 print(error.localizedDescription)
             } else if let data = data {
                 
-                // ––––– TODO: Get data from API and return it using completion
-                let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-                
-                let restDict = dataDictionary["businesses"] as! [[String: Any]]
-                
-                let restaurants = restDict.map({ Restaurant.init(dict: $0) })
-                
-                // Using For Loop
-//                var restaurants: [Restaurant] = []
-//                for dictionary in dataDictionary {
-//                    let restaurant = Restaurant.init(dict: dictionary as! [String : Any])
-//                    restaurants.append(restaurant)
-//                }
+        
 
-                                
-                return completion(restaurants)
+                // ––––– TODO: Get data from API and return it using completion
+                print(data)
+                
+                
+                
+                return completion([:])
                 
                 }
             }
