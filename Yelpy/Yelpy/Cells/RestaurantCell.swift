@@ -15,7 +15,7 @@ class RestaurantCell: UITableViewCell {
     
     @IBOutlet weak var restaurantImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var starsImage: UIImageView!
     @IBOutlet weak var reviewsLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
@@ -27,10 +27,10 @@ class RestaurantCell: UITableViewCell {
             nameLabel.text = r.name
             categoryLabel.text = r.mainCategory
             phoneLabel.text = r.phone
-            ratingLabel.text = "Rating: " + String(r.rating)
-            reviewsLabel.text = "Reviews: " + String(r.reviews)
+            reviewsLabel.text = String(r.reviews) + " reviews"
             
-            // set image
+            // set images
+            starsImage.image = Stars.setImageFor(stars: r.rating)
             restaurantImage.af.setImage(withURL: r.imageURL!)
             restaurantImage.layer.cornerRadius = 10
             restaurantImage.clipsToBounds = true
