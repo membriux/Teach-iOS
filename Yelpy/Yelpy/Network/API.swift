@@ -12,8 +12,7 @@ import Foundation
 struct API {
     
 
-    
-    static func getFoodData(completion: @escaping ([Restaurant]?) -> Void) {
+    static func getRestaurants(completion: @escaping ([Restaurant]?) -> Void) {
         
         // ––––– TODO: Add your own API key!
         let apikey = "gjSp5LrrEi9tJFLQALnw-RdZSRy-TLiJsfPM09LzFMNpMnmSHQZ2n2R_f3ptONYEalxMIudE9avxn_bQvvDZJc1zpPdfPDOvdh08RlT8vZGbqFx3dbtkuliMwATHXnYx"
@@ -59,6 +58,10 @@ struct API {
             task.resume()
         
         }
-    }
+    
+    
+
+    
+}
 
     

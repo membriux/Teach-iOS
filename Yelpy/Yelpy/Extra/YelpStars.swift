@@ -22,27 +22,5 @@ struct Stars {
     static var fourHalf = UIImage(named: "regular_4_half")
     static var five = UIImage(named: "regular_5")
     
-    
-    static func setImageFor(stars: Double) -> UIImage {
-        switch stars {
-        case 2.0:
-            return Stars.two!
-        case 2.5:
-            return Stars.twoHalf!
-        case 3.0:
-            return Stars.three!
-        case 3.5:
-            return Stars.threeHalf!
-        case 4.0:
-            return Stars.four!
-        case 4.5:
-            return Stars.fourHalf!
-        case 5.0:
-            return Stars.five!
         
-        default:
-            return Stars.zero!
-        }
-    }
-    
 }

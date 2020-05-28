@@ -12,7 +12,6 @@ import AlamofireImage
 class RestaurantCell: UITableViewCell {
 
     
-    
     @IBOutlet weak var restaurantImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var starsImage: UIImageView!
@@ -30,7 +29,7 @@ class RestaurantCell: UITableViewCell {
             reviewsLabel.text = String(r.reviews) + " reviews"
             
             // set images
-            starsImage.image = Stars.setImageFor(stars: r.rating)
+            starsImage.image = Restaurant.setImageFor(stars: r.rating)
             restaurantImage.af.setImage(withURL: r.imageURL!)
             restaurantImage.layer.cornerRadius = 10
             restaurantImage.clipsToBounds = true

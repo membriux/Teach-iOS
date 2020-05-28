@@ -43,7 +43,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // ––––– TODO: Update API results + restaurantsArray Variable + filteredRestaurants
     func getAPIData() {
-        API.getFoodData() { (restaurants) in
+        API.getRestaurants() { (restaurants) in
             guard let restaurants = restaurants else {
                 return
             }
@@ -65,7 +65,7 @@ extension ViewController {
         return filteredRestaurants.count
     }
     
-    // ––––– TODO: Configure cell to use [Movie] array instead of [[String:Any]]
+    // ––––– TODO: Configure cell to use [Movie] array instead of [[String:Any]] and Filtered Array
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Create Restaurant Cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantCell") as! RestaurantCell
@@ -73,6 +73,17 @@ extension ViewController {
         // Set cell's restaurant
         cell.r = filteredRestaurants[indexPath.row]
         return cell
+    }
+    
+    // ––––– TODO: Send restaurant object to DetailViewController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UITableViewCell
+        if let indexPath = tableView.indexPath(for: cell) {
+            let r = filteredRestaurants[indexPath.row]
+            let detailViewController = segue.destination as! DetailViewController
+            detailViewController.r = r
+        }
+        
     }
     
 }
