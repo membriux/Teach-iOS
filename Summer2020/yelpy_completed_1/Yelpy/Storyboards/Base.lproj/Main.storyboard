@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ViewController-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="ViewController" id="BYZ-38-t0r" customClass="RestaurantsViewController" customModule="Yelpy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IVO-xe-xPB">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RestaurantCell" id="gfl-Bt-cc4" customClass="RestaurantCell" customModule="Yelpy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="176.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gfl-Bt-cc4" id="AoG-d4-LFu">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="176.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qci-gP-2AU">
+                                                    <rect key="frame" x="246" y="8" width="160" height="160"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="160" id="Nal-j7-fuO"/>
+                                                        <constraint firstAttribute="height" constant="160" id="bdC-6U-sfW"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kX-ly-HAn">
+                                                    <rect key="frame" x="8" y="24" width="230" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Qci-gP-2AU" firstAttribute="top" secondItem="AoG-d4-LFu" secondAttribute="top" constant="8" id="4PZ-L7-s3L"/>
+                                                <constraint firstItem="1kX-ly-HAn" firstAttribute="top" secondItem="AoG-d4-LFu" secondAttribute="top" constant="24" id="T4g-hi-5Q4"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="1kX-ly-HAn" secondAttribute="bottom" constant="8" id="TtZ-s6-CwK"/>
+                                                <constraint firstItem="1kX-ly-HAn" firstAttribute="leading" secondItem="AoG-d4-LFu" secondAttribute="leading" constant="8" id="Wg8-Ws-uta"/>
+                                                <constraint firstAttribute="trailing" secondItem="Qci-gP-2AU" secondAttribute="trailing" constant="8" id="tAx-fX-ITc"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Qci-gP-2AU" secondAttribute="bottom" constant="8" id="zax-QY-6Vf"/>
+                                                <constraint firstItem="Qci-gP-2AU" firstAttribute="leading" secondItem="1kX-ly-HAn" secondAttribute="trailing" constant="8" id="zfU-De-pSK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label" destination="1kX-ly-HAn" id="Ed0-nQ-I6A"/>
+                                            <outlet property="restaurantImage" destination="Qci-gP-2AU" id="9Iv-KM-Btr"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="IVO-xe-xPB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3Kh-WT-BPg"/>
+                            <constraint firstItem="IVO-xe-xPB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3P9-gk-WJi"/>
+                            <constraint firstItem="IVO-xe-xPB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="COG-8F-fqZ"/>
+                            <constraint firstItem="IVO-xe-xPB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iUm-X5-u7D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="IVO-xe-xPB" id="rK0-98-n2j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="123.88392857142857"/>
+        </scene>
+    </scenes>
+</document>
