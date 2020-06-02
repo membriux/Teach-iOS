@@ -11,6 +11,7 @@
 		BB47B3AF2477426A0029FFF6 /* exampleAPI.json in Resources */ = {isa = PBXBuildFile; fileRef = BB47B3AE2477426A0029FFF6 /* exampleAPI.json */; };
 		BB47B3B82477565E0029FFF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB47B3B62477565E0029FFF6 /* Main.storyboard */; };
 		BBC34B1A248075140001BE0B /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC34B19248075140001BE0B /* RestaurantCell.swift */; };
+		BBE518382484812500D0F8B6 /* YelpStars.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE518362484812500D0F8B6 /* YelpStars.swift */; };
 		BBEBF10C247738A50044AFE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBF10B247738A50044AFE0 /* AppDelegate.swift */; };
 		BBEBF10E247738A50044AFE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBF10D247738A50044AFE0 /* SceneDelegate.swift */; };
 		BBEBF110247738A50044AFE0 /* RestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBF10F247738A50044AFE0 /* RestaurantsViewController.swift */; };
@@ -27,6 +28,7 @@
 		BB47B3AE2477426A0029FFF6 /* exampleAPI.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = exampleAPI.json; sourceTree = "<group>"; };
 		BB47B3B72477565E0029FFF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BBC34B19248075140001BE0B /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
+		BBE518362484812500D0F8B6 /* YelpStars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpStars.swift; sourceTree = "<group>"; };
 		BBEBF108247738A50044AFE0 /* Yelpy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yelpy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBEBF10B247738A50044AFE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBEBF10D247738A50044AFE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		BBE518352484812500D0F8B6 /* Extra */ = {
+			isa = PBXGroup;
+			children = (
+				BBE518362484812500D0F8B6 /* YelpStars.swift */,
+			);
+			path = Extra;
+			sourceTree = "<group>";
+		};
 		BBEBF0FF247738A50044AFE0 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +137,7 @@
 				BB47B3AC247739890029FFF6 /* Controllers */,
 				BB47B3AB247739720029FFF6 /* Network */,
 				BB47B3AD247739F00029FFF6 /* Storyboards */,
+				BBE518352484812500D0F8B6 /* Extra */,
 				BBEBF119247738A50044AFE0 /* Info.plist */,
 			);
 			path = Yelpy;
@@ -251,6 +262,7 @@
 				BBC34B1A248075140001BE0B /* RestaurantCell.swift in Sources */,
 				BBEBF110247738A50044AFE0 /* RestaurantsViewController.swift in Sources */,
 				BB47B3AA247739640029FFF6 /* API.swift in Sources */,
+				BBE518382484812500D0F8B6 /* YelpStars.swift in Sources */,
 				BBEBF10C247738A50044AFE0 /* AppDelegate.swift in Sources */,
 				BBEBF10E247738A50044AFE0 /* SceneDelegate.swift in Sources */,
 			);

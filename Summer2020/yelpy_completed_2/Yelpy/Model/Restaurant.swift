@@ -55,12 +55,9 @@ class Restaurant {
             return Stars.fourHalf!
         case 5.0:
             return Stars.five!
-        
         default:
             return Stars.zero!
         }
     }
-
-    
     
 }
