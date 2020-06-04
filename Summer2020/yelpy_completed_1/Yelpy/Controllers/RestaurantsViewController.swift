@@ -41,8 +41,6 @@ class RestaurantsViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     // Protocol Stubs
-    
-    
     // How many cells there will be
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return restaurantsArray.count
@@ -56,15 +54,21 @@ class RestaurantsViewController: UIViewController, UITableViewDelegate, UITableV
         
         let restaurant = restaurantsArray[indexPath.row]
         
-        // Set Label to restaurant name for each cell
-        cell.nameLabel.text = restaurant["name"] as? String ?? ""
-        let categories =
+        // Set name and phone of cell label
+        cell.nameLabel.text = restaurant["name"] as? String
+        cell.phoneLabel.text = restaurant["display_phone"] as? String
         
-            cell.categoryLabel.text = restaurant["categories"] as? String ?? ""
-        cell.reviewsLabel.text =
-        cell.phoneLabel.text =
-        cell.starsImage =
+        // Get reviews
+        let reviews = restaurant["review_count"] as? Int
+        cell.reviewsLabel.text = String(reviews!)
         
+        // Get categories
+        let categories = restaurant["categories"] as! [[String: Any]]
+        cell.categoryLabel.text = categories[0]["title"] as? String
+        
+        // Set stars images
+        let reviewDouble = restaurant["rating"] as! Double
+        cell.starsImage.image = Stars.dict[reviewDouble]!
         
         // Set Image of restaurant
         if let imageUrlString = restaurant["image_url"] as? String {
