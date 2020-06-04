@@ -67,6 +67,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BB1AE7192488D9CE00DFC1F4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		BB47B3AB247739720029FFF6 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +141,7 @@
 				BBEBF10D247738A50044AFE0 /* SceneDelegate.swift */,
 				BB47B3AE2477426A0029FFF6 /* exampleAPI.json */,
 				BB47B3AD247739F00029FFF6 /* Storyboards */,
+				BB1AE7192488D9CE00DFC1F4 /* Models */,
 				BB47B3B32477539A0029FFF6 /* Cells */,
 				BB47B3AC247739890029FFF6 /* Controllers */,
 				BB47B3AB247739720029FFF6 /* Network */,

@@ -11,15 +11,14 @@ import AlamofireImage
 
 class RestaurantsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    // ––––– TODO: Add storyboard Items (i.e. tableView + Cell + configurations for Cell + cell outlets)
-    // ––––– TODO: Next, place TableView outlet here
     @IBOutlet weak var tableView: UITableView!
     
-    // –––––– TODO: Configure the API and Initialize restaurantsArray
+    // ––––– TODO: Build Restaurant Class
+    
+    // –––––– TODO: Update restaurants Array to an array of Restaurants
     var restaurantsArray: [[String:Any?]] = []
     
     
-    // ––––– TODO: Add tableView datasource + delegate
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,7 +28,7 @@ class RestaurantsViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     
-    // ––––– TODO: Get data from API helper and retrieve restaurants
+    // ––––– TODO: Update API to get an array of restaurant objects
     func getAPIData() {
         API.getRestaurants() { (restaurants) in
             guard let restaurants = restaurants else {
@@ -47,7 +46,7 @@ class RestaurantsViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
 
-    // What type of cell are we configuring
+    // ––––– TODO: Configure cell using MVC
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Create Restaurant Cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantCell") as! RestaurantCell
@@ -76,15 +75,13 @@ class RestaurantsViewController: UIViewController, UITableViewDelegate, UITableV
             cell.restaurantImage.af.setImage(withURL: imageUrl!)
         }
         
-        
-        
         return cell
     }
+    
+    // –––––– TODO: Override segue to pass the restaurant object to the DetailsViewController
 
     
 
 }
-
-// ––––– TODO: Create tableView Extension and TableView Functionality
 
 
