@@ -6,7 +6,7 @@ Below is the content I taught in iOS for CodePath's Tech Fellow training.
 
 ### Week 1 – APIs + TableViews
 
-- [Lab 1 Starter](/Summer2020/assets/yelpy_starter_1.zip)
+- [(Download) Lab 1 Starter](/Summer2020/assets/yelpy_starter_1.zip?raw=true)
 - [Walkthrough](/Summer2020/yelpy_starter_1)
 
 ### Week 2 – Passing Data + MVC
