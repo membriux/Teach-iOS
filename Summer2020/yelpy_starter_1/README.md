@@ -1,8 +1,4 @@
-:::warning
-☝️ **NO submission is required for labs**
-:::
-
-## Yelpy - Part 1
+# Yelpy - Part 1
 
 <img src="https://i.imgur.com/JL1snRo.gif" width=200 /></br>
 
