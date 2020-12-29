@@ -1,7 +1,7 @@
 
 # Teach-iOS
 
-**Check out our CodePath at UCI [website](https://clubs.uci.edu/codepath)! This repo contains resources for students learning iOS. Resources include starter projects, learning material, topics, and more. Check out**
+**Check out our CodePath at UCI [website](https://sites.uci.edu/codepath)! This repo contains resources for students learning iOS. Resources include starter projects, learning material, topics, and more. Check out**
 
 ## Directory of Projects
 
